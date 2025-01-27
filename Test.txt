@@ -1,5 +1,5 @@
 game.StarterGui:SetCore("SendNotification", {
-	Image = "http://www.roblox.com/asset/?id=132336058081263",
+	Image = "http://www.roblox.com/asset/?id=132336058081263";
     Title = "Meizu Hub";
     Text = "Loading"; -- what the text says (ofc)
     Duration = 7;
