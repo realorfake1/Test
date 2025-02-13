@@ -1,7 +1,7 @@
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Meizu Hub";
     Text = "Loading..."; -- what the text says (ofc)
-    Icon = "rbxassetid://137351349124919",
+    Icon = "rbxassetid://127376585168771",
     Duration = 9;
 })
 
