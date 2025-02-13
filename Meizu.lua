@@ -353,8 +353,6 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 	game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
-local a=Instance.new("ScreenGui")local b=Instance.new("ImageButton")local c=Instance.new("UICorner")a.Parent=game.Players.LocalPlayer:WaitForChild("PlayerGui")a.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;b.Parent=a;b.BackgroundColor3=Color3.fromRGB(255,255,255)b.BorderColor3=Color3.fromRGB(0,0,0)b.BorderSizePixel=0;b.Position=UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0)b.Size=UDim2.new(0,50,0,50)b.Image="rbxassetid://132336058081263"c.Parent=b;local function d()local e=Instance.new('LocalScript',b)e.Parent.MouseButton1Click:Connect(function()game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)end)end;coroutine.wrap(d)()
-
 First_Sea = false
 Second_Sea = false
 Third_Sea = false
@@ -2284,7 +2282,7 @@ end
   function Tween2(P1)
     local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
     if Distance >= 1 then
-    Speed = 300
+    Speed = 325
     end
     game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear), {
       CFrame = P1
@@ -4622,11 +4620,11 @@ local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
 Camera:Stop()
 
 
-    local ToggleBringMob = Tabs.Setting:AddToggle("ToggleBringMob", {Title = "Enable Bring Mob / Magnet", Default = true })
+    local ToggleBringMob = Tabs.Setting:AddToggle("ToggleBringMob", {Title = "Enable Bring Mob / Magnet", Default = false })
     ToggleBringMob:OnChanged(function(Value)
         _G.BringMob = Value
     end)
-    Options.ToggleBringMob:SetValue(true)
+    Options.ToggleBringMob:SetValue(false)
         spawn(function()
             while wait() do
                 pcall(function()
@@ -6595,6 +6593,7 @@ Tabs.Misc:AddButton({
         end
     end
 })
+local a=Instance.new("ScreenGui")local b=Instance.new("ImageButton")local c=Instance.new("UICorner")a.Parent=game.Players.LocalPlayer:WaitForChild("PlayerGui")a.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;b.Parent=a;b.BackgroundColor3=Color3.fromRGB(255,255,255)b.BorderColor3=Color3.fromRGB(0,0,0)b.BorderSizePixel=0;b.Position=UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0)b.Size=UDim2.new(0,50,0,50)b.Image="rbxassetid://132336058081263"c.Parent=b;local function d()local e=Instance.new('LocalScript',b)e.Parent.MouseButton1Click:Connect(function()game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)end)end;coroutine.wrap(d)()
 Fluent:Notify({
     Title = "Meizu Hub",
     Content = "Loading Successfully",
