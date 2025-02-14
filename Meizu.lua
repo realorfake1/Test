@@ -6581,7 +6581,7 @@ Tabs.Misc:AddButton({
 })
 local player = game.Players.LocalPlayer
 local function sendChatMessage(message)
-    player:Chat(chatMessage)
+    player:Chat(MeizuHub)
 end
 local chatMessage = "Welcome To MeizuHub"
 while true do
