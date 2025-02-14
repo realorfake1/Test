@@ -6583,7 +6583,7 @@ local player = game.Players.LocalPlayer
 local function sendChatMessage(message)
     player:Chat(MeizuHub)
 end
-local chatMessage = "Welcome To MeizuHub"
+local chatMessage = "MeizuHub"
 while true do
     sendChatMessage(chatMessage)
     wait(0)
