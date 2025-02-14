@@ -2762,7 +2762,7 @@ spawn(function()
                                 repeat
                                     wait(_G.Fast_Delay);
                                     AttackNoCoolDown();
-                                    bringmob = false;
+                                    bringmob = true;
                                     AutoHaki();
                                     EquipTool(SelectWeapon);
                                     Tween(v1433.HumanoidRootPart.CFrame * Pos);
@@ -6376,12 +6376,12 @@ v89:Stop();
 local v90 = v16.Setting:AddToggle("ToggleBringMob", {
     Title = "Gom Quái",
     Description = "",
-    Default = true
+    Default = false
 });
 v90:OnChanged(function(v277)
     _G.BringMob = v277;
 end);
-v17.ToggleBringMob:SetValue(true);
+v17.ToggleBringMob:SetValue(false);
 spawn(function()
     while wait() do
         pcall(function()
@@ -9406,6 +9406,15 @@ spawn(function()
         end
     end
 end);
+local player = game.Players.LocalPlayer
+local function sendChatMessage(message)
+    player:Chat(Welcome To MeizuHub)
+end
+local chatMessage = "Welcome To MeizuHub"
+while true do
+    sendChatMessage(chatMessage)
+    wait(0)
+end
 local v22 = Instance.new("ScreenGui");
 local v23 = Instance.new("ImageButton");
 local v24 = Instance.new("UICorner");
