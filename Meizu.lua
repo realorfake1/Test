@@ -6579,15 +6579,6 @@ Tabs.Misc:AddButton({
         end
     end
 })
-local player = game.Players.LocalPlayer
-local function sendChatMessage(message)
-    player:Chat(MeizuHub)
-end
-local chatMessage = "MeizuHub"
-while true do
-    sendChatMessage(chatMessage)
-    wait(0)
-end
 local a=Instance.new("ScreenGui")local b=Instance.new("ImageButton")local c=Instance.new("UICorner")a.Parent=game.Players.LocalPlayer:WaitForChild("PlayerGui")a.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;b.Parent=a;b.BackgroundColor3=Color3.fromRGB(255,255,255)b.BorderColor3=Color3.fromRGB(0,0,0)b.BorderSizePixel=0;b.Position=UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0)b.Size=UDim2.new(0,50,0,50)b.Image="rbxassetid://132336058081263"c.Parent=b;local function d()local e=Instance.new('LocalScript',b)e.Parent.MouseButton1Click:Connect(function()game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)end)end;coroutine.wrap(d)()
 
 Fluent:Notify({
