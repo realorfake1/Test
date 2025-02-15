@@ -314,8 +314,6 @@ v5:Destroy();
 --         pcall(v422);
 --     end
 -- end);
-Notify("<Color=White>Hello, Welcome To Meizu Hub<Color=/>", 10)
-Notify("<Color=Blue>MeizuHub<Color=/>", 8)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
