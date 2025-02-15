@@ -3841,15 +3841,14 @@ ToggleSeaBeAst:OnChanged(function(Value)
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v.Name == "Terrorshark" then
                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                    repeat
-                                        wait(_G.Fast_Delay);
-                                        AttackNoCoolDown();
+                                    repeat wait(0)
+                                        
                                         AutoHaki();
-                                        EquipTool(SelectWeapon);
-                                        v.HumanoidRootPart.CanCollide = false;
-                                        v.Humanoid.WalkSpeed = 0;
-                                        v.HumanoidRootPart.Size = Vector3.new(60, 60, 60);
-                                        Tween(v.HumanoidRootPart.CFrame * Pos);
+                                        EquipTool(SelectWeapon)
+                                        v.HumanoidRootPart.CanCollide = false
+                                        v.Humanoid.WalkSpeed = 0
+                                        v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                        Tween(v.HumanoidRootPart.CFrame * CFrame.new(posX,posY,posZ))
                                     until not _G.AutoTerrorshark or not v.Parent or (v.Humanoid.Health <= 0)
                                 end
                             end
@@ -4534,10 +4533,14 @@ end
                                          
                                         AutoHaki()
                                         EquipTool(SelectWeapon)
-                                        v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
-                                        v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         Tween(v.HumanoidRootPart.CFrame * CFrame.new(posX,posY,posZ))
+                                        v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                        v.HumanoidRootPart.Transparency = 1
+                                        v.Humanoid.JumpPower = 0
+                                        v.Humanoid.WalkSpeed = 0
+                                        v.HumanoidRootPart.CanCollide = false
+                                        FarmPos = v.HumanoidRootPart.CFrame
+                                        MonFarm = v.Name
                                     until not _G.AutoCakeV2 or not v.Parent or v.Humanoid.Health <= 0
                                 end
                             end
