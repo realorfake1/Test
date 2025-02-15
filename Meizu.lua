@@ -314,7 +314,8 @@ v5:Destroy();
 --         pcall(v422);
 --     end
 -- end);
-
+Notify("<Color=White>Hello, Welcome To Meizu Hub<Color=/>", 10)
+Notify("<Color=Blue>MeizuHub<Color=/>", 8)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -4813,8 +4814,8 @@ local Pos = Tabs.Setting:AddSection("Distance Farm")
 local SliderPosX = Tabs.Setting:AddSlider("SliderPosX", {
     Title = "Pos X",
     Description = "",
-    Default = 10,
-    Min = -60,
+    Default = 0,
+    Min = 0,
     Max = 60,
     Rounding = 1,
     Callback = function(Value)
@@ -4830,7 +4831,7 @@ local SliderPosY = Tabs.Setting:AddSlider("SliderPosY", {
     Title = "Pos Y",
     Description = "",
     Default = 30,
-    Min = -60,
+    Min = 0,
     Max = 60,
     Rounding = 1,
     Callback = function(Value)
@@ -4845,8 +4846,8 @@ SliderPosY:SetValue(30)
 local SliderPosZ = Tabs.Setting:AddSlider("SliderPosZ", {
     Title = "Pos Z",
     Description = "",
-    Default = 10,
-    Min = -60,
+    Default = 0,
+    Min = 0,
     Max = 60,
     Rounding = 1,
     Callback = function(Value)
