@@ -9406,15 +9406,7 @@ spawn(function()
         end
     end
 end);
-local player = game.Players.LocalPlayer
-local function sendChatMessage(message)
-    player:Chat(Welcome To MeizuHub)
-end
-local chatMessage = "Welcome To MeizuHub"
-while true do
-    sendChatMessage(chatMessage)
-    wait(0)
-end
+
 local v22 = Instance.new("ScreenGui");
 local v23 = Instance.new("ImageButton");
 local v24 = Instance.new("UICorner");
