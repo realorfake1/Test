@@ -320,7 +320,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "Meizu Hub",
-    SubTitle = "By Nttp1721",
+    SubTitle = "By Nttphu1721",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = false,
@@ -3310,7 +3310,7 @@ spawn(function()
     end)
 
 
-    local ToggleSpawnCake = Tabs.Main:AddToggle("ToggleSpawnCake", {Title = "Auto Spawn Cake Prince", Default = false })
+    local ToggleSpawnCake = Tabs.Main:AddToggle("ToggleSpawnCake", {Title = "Auto Spawn Cake Prince", Default = false})
     ToggleSpawnCake:OnChanged(function(Value)
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner",Value)
     end)
@@ -4826,7 +4826,7 @@ local SliderPosX = Tabs.Setting:AddSlider("SliderPosX", {
 SliderPosX:OnChanged(function(Value)
   posX = Value
 end)
-SliderPosX:SetValue(10)
+SliderPosX:SetValue(0)
 
 local SliderPosY = Tabs.Setting:AddSlider("SliderPosY", {
     Title = "Pos Y",
@@ -4858,7 +4858,7 @@ local SliderPosZ = Tabs.Setting:AddSlider("SliderPosZ", {
 SliderPosZ:OnChanged(function(Value)
      posZ = Value
 end)
-SliderPosZ:SetValue(10)
+SliderPosZ:SetValue(0)
 
 local ToggleMelee = Tabs.Setting:AddToggle("ToggleMelee", {Title = "Add Melee", Default = false })
 ToggleMelee:OnChanged(function(Value)
