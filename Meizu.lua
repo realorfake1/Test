@@ -320,7 +320,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "Meizu Hub",
-    SubTitle = "By Nttphu1721",
+    SubTitle = "By Nttphu1721 [VIETNAM]",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = false,
@@ -2767,12 +2767,12 @@ end);
 local AuthorScript = Tabs.Author:AddSection("Author")
 Tabs.Author:AddButton({
 	Title = "Facebook",
-	Description = "Tại Đây",
+	Description = "Nttphu1721",
     Callback = function()
         setclipboard("https://www.facebook.com/nttphu1721");
         Fluent:Notify({
         Title = "Meizu Hub",
-        Content = "Đã Sao Chép",
+        Content = "Copied The Link,
         SubContent = "",
         Duration = 3
         })
@@ -2786,7 +2786,20 @@ Tabs.Author:AddButton({
         setclipboard("https://tiktok.com/@meizu.hub");
         Fluent:Notify({
         Title = "Meizu Hub",
-        Content = "Đã Sao Chép",
+        Content = "Copied The Link",
+        SubContent = "",
+        Duration = 3
+        })
+    end
+})
+Tabs.Author:AddButton({
+	Title = "GitHub",
+	Description = "Nttp1721",
+    Callback = function()
+        setclipboard("https://github.com/Nttp1721");
+        Fluent:Notify({
+        Title = "Meizu Hub",
+        Content = "Copied The Link",
         SubContent = "",
         Duration = 3
         })
@@ -6593,6 +6606,6 @@ local a=Instance.new("ScreenGui")local b=Instance.new("ImageButton")local c=Inst
 Fluent:Notify({
     Title = "Meizu Hub",
     Content = "Loading Successfully",
-    SubContent = "Script By Nttp1721",
+    SubContent = "Script By Nttphu1721",
     Duration = 5
 })
