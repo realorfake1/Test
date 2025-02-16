@@ -1,7 +1,7 @@
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Meizu Hub";
     Text = "Loading..."; -- what the text says (ofc)
-    Icon = "rbxassetid://132336058081263",
+    Icon = "rbxassetid://127376585168771",
     Duration = 9;
 })
 shared.LoaderTitle = "Thanks For Using Meizu";
@@ -6368,6 +6368,13 @@ Tabs.Shop:AddButton({
 	end
 })
 
+Tabs.Shop:AddButton({
+	Title = "Sanguine Art",
+	Description = "",
+	Callback = function()
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
+	end
+})
 
 local Mastery = Tabs.Shop:AddSection("Misc Items")
 
