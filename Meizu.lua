@@ -4569,38 +4569,7 @@ end
             end
         end
     end)
-    local Ripindratrueform = Tabs.Main:AddToggle("ToggleRipIndraV2", {Title = "Auto Rip Indra", Default = false })
-    Ripindratrueform:OnChanged(function(Value)
-    	RipIndra = Value
-    end)
-        Options.Ripindratrueform:SetValue(false)
-    spawn(function()
-        while wait() do
-            if RipIndra then
-                pcall(function()
-                	if game:GetService("Workspace").Enemies:FindFirstChild("rip_indra True Form") or game:GetService("Workspace").Enemies:FindFirstChild("rip_indra") then
-                	    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                	        if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                if v.Name == "rip_indra True Form" then
-                                	repeat wait(0)
-                                    	AutoHaki()
-                                        EquipTool(SelectWeapon)
-                                        Tween(v.HumanoidRootPart.CFrame * CFrame.new(posX,posY,posZ))
-                                        v.HumanoidRootPart.Size = Vector3.new(50, 50, 50)
-                                        v.HumanoidRootPart.CanCollide = false
-                                        FarmPos = v.HumanoidRootPart.CFrame
-                                        MonFarm = v.Name
-                                    until v.Humanoid.Health <= 0 or not RipIndra or not v.Parent
-                                end
-                            end
-                        end
-                    else
-                    	Tween(CFrame.new(- 5344.822265625, 423.98541259766, - 2725.0930175781))
-                    end
-                end)
-            end
-        end
-    end)
+    
     
 if Second_Sea or Third_Sea then
     local ToggleHakiColor = Tabs.Main:AddToggle("ToggleHakiColor", {Title = "Buy Haki Color",Default = false })
@@ -6632,6 +6601,40 @@ Tabs.Misc:AddButton({
         end
     end
 })
+if Third_Sea then
+local Ripindratrueform = Tabs.Main:AddToggle("ToggleRipIndratrueform", {Title = "Auto Rip Indra", Default = false })
+Ripindratrueform:OnChanged(function(Value)
+    RipIndra = Value
+end)
+    Options.Ripindratrueform:SetValue(false)
+end
+spawn(function()
+    while wait() do
+        if RipIndra then
+            pcall(function()
+            	if game:GetService("Workspace").Enemies:FindFirstChild("rip_indra True Form") then
+                	for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+            	        if v.Name == "rip_indra True Form" then
+                            if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                            	repeat wait(0)
+                                	AutoHaki()
+                                    EquipTool(SelectWeapon)
+                                    Tween(v.HumanoidRootPart.CFrame * Pos)
+                                    v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                    v.HumanoidRootPart.CanCollide = false
+                                    FarmPos = v.HumanoidRootPart.CFrame
+                                    MonFarm = v.Name
+                                until v.Humanoid.Health <= 0 or not RipIndra or not v.Parent
+                            end
+                        end
+                    end
+                else
+                	Tween(CFrame.new(- 5344.822265625, 423.98541259766, - 2725.0930175781))
+                end
+            end)
+        end
+    end
+end)
 local a=Instance.new("ScreenGui")local b=Instance.new("ImageButton")local c=Instance.new("UICorner")a.Parent=game.Players.LocalPlayer:WaitForChild("PlayerGui")a.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;b.Parent=a;b.BackgroundColor3=Color3.fromRGB(255,255,255)b.BorderColor3=Color3.fromRGB(0,0,0)b.BorderSizePixel=0;b.Position=UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0)b.Size=UDim2.new(0,50,0,50)b.Image="rbxassetid://132336058081263"c.Parent=b;local function d()local e=Instance.new('LocalScript',b)e.Parent.MouseButton1Click:Connect(function()game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)end)end;coroutine.wrap(d)()
 
 Fluent:Notify({
