@@ -1,3 +1,9 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Meizu Hub";
+    Text = "Loading..."; -- what the text says (ofc)
+    Icon = "rbxassetid://127376585168771",
+    Duration = 9;
+})
 local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/OniiChanVanThanhIOS/refs/heads/main/main.txt"))()
 
 
